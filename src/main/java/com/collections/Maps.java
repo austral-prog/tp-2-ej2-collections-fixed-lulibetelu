@@ -49,11 +49,7 @@ public class Maps {
 
     public Map<String, Integer> removeItem(Map<String, Integer> inventory, String item) {
         // todo: Implement the logic to remove an item from the inventory if it matches the item string
-        for (Map.Entry<String, Integer> entry: inventory.entrySet()){
-            if (inventory.containsKey(item)){
                 inventory.remove(item);
-            }
-        }
         return inventory;
     }
 
@@ -62,7 +58,7 @@ public class Maps {
         List<Map.Entry<String, Integer>> tuplas = new ArrayList<>();
         for (Map.Entry<String, Integer> tupla: inventory.entrySet()){
             if (tupla.getValue() != 0){
-                tuplas.add(tupla.getKey(), tupla.getValue());
+                tuplas.add(tupla);
 
             }
         }
